@@ -1,0 +1,215 @@
+@forward "reset";
+@forward "header";
+@forward "footer";
+@use "mixin" as *;
+.fv {
+  margin-top: 80px;
+  height: 221px;
+  background-image: url("../image/cta@2x.png");
+  @include back_image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .section_title {
+    font-size: 3.2rem;
+    color: #ffffff;
+  }
+}
+.breadcrumb {
+  height: 50px;
+  background-color: #F8F8F8;
+  .breadcrumb_wrapper {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .breadcrumb_link {
+      text-decoration: underline;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: $main-color;
+      margin-right: 6px;
+    }
+    .breadcrumb_span {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: $main-color;
+      margin-right: 6px;
+    }
+    .breadcrumb_items {
+      @extend .breadcrumb_span;
+    }
+  }
+}
+.contact {
+  margin: 0 auto;
+  margin-top: 58px;
+  margin-bottom: 82px;
+  .contact_wrapper {
+    margin: 0 auto;
+    max-width: 700px;
+    @include f_column;
+    .contact_text {
+      color:$main-color;
+      font-weight: normal;
+      @include font_h(2.7rem,1.6rem);
+    }
+    .contact_form {
+      width: 100%;
+      @include f_column;
+      .input_label {
+        color: $main-color;
+        margin-bottom: 12px;
+        font-weight: normal;
+        &:first-child {
+          margin-top: 41px;
+        }
+      }
+      .input_text {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        border: solid 0.5px $main-color;
+        font-weight: normal;
+        font-size: 1.6rem;
+      }
+      .input_message {
+        height: 240px;
+        width: 100%;
+        border: solid 0.5px $main-color;
+        padding: 22px;
+        font-weight: normal;
+        font-size: 1.6rem;
+      }
+      .contact_label {
+        color: $main-color;
+        margin-top: 4px;
+        margin-bottom: 19px;
+        font-weight: normal;
+      }
+      .contact_list {
+        height: 20px;
+        margin-bottom: 14px;
+        align-items: center;
+        display: flex;
+        .contact_radio {
+          height: 20px;
+          width: 20px;
+          border: solid 1px #707070;
+          margin-right: 19px;
+          display: flex;
+          justify-content: left;
+        }
+        .contact_text {
+          font-weight: normal;
+          color: $main-color;
+        }
+      }
+      .contact_label {
+        color: $main-color;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        font-weight: normal;
+      }
+      .privacy_text {
+        margin-top: 30px;
+        margin-bottom: 31px;
+        text-align: center;
+        font-weight: normal;
+        color: $main-color;
+        .privacy_span {
+          color: $main-color_2;
+          font-weight: normal;
+          text-decoration: underline;
+        }
+      }
+      .privacy_check {
+        height: 20px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .privacy_check_box {
+          height: 20px;
+          width: 20px;
+          cursor: pointer;
+          margin-right: 15px;
+          .input_check {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+          }
+        }
+        .privacy_consent_text {
+          font-weight: normal;
+          color: $main-color;
+        }
+      }
+      .contact_button {
+        font-size: 1.6rem;
+        margin: 0 auto;
+        margin-top: 48px;
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: $main-color;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+@include media(900px) {
+  html {
+    font-size: 55%;
+    body {
+      .fv {
+        margin-top: 60px;
+      }
+      .breadcrumb {
+        padding: 0 20px;
+      }
+      .contact {
+        width: 90%;
+      }
+    }
+  }
+}
+@include media(768px) {
+  html {
+    font-size: 50%;
+    body {
+      .fv {
+        height: 190px;
+      }
+      .contact {
+        .contact_wrapper {
+          .contact_form {
+            .contact_label {
+              line-height: 1.5;
+            }
+            .contact_button {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media(390px) {
+  html {
+    font-size: 40%;
+    body {
+      .fv {
+        height: 150px;
+      }
+    }
+  }
+}

@@ -1,0 +1,413 @@
+@forward "reset";
+@forward "header";
+@forward "footer";
+@use "mixin" as *;
+.fv {
+  margin-top: 80px;
+  height: 221px;
+  background-image: url("../image/plan@2x.png");
+  @include back_image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .section_title {
+    font-size: 3.2rem;
+    color: #ffffff;
+  }
+}
+.breadcrumb {
+  height: 50px;
+  background-color: #F8F8F8;
+  .breadcrumb_wrapper {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .breadcrumb_link {
+      text-decoration: underline;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: $main-color;
+      margin-right: 6px;
+    }
+    .breadcrumb_span {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: $main-color;
+      margin-right: 6px;
+    }
+    .breadcrumb_items {
+      @extend .breadcrumb_span;
+    }
+  }
+}
+.price {
+  .price_wrapeer {
+    @include position_center;
+    margin-top: 58px;
+    max-width: 900px;
+    .section_title {
+      @include section_title2;
+      margin-bottom: 60px;
+    }
+  }
+  .price_container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    .price_items {
+      width: 280px;
+      height: 90px;
+      background-color: $main-color;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      span {
+        color: #ffffff;
+        font-size: 2.2rem;
+      }
+    }
+    .price_plus {
+      width: 26.8px;
+      height: 2px;
+      background-color: $main-color;
+      margin: 0 35.7px;
+      position: relative;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      transform: rotate(90deg);
+      width: 26.8px;
+      height: 2px;
+      background-color: $main-color;
+    }
+  }
+  .price_text {
+    margin-top: 45.8px;
+    p {
+      color: $main-color;
+      text-align: left;
+      @include font_h(2.7rem,1.6rem);
+      font-weight: normal;
+    }
+  }
+}
+.plan {
+  margin-bottom: 62px;
+  .section_title {
+    @include section_title2;
+    margin-top: 90px;
+  }
+  .plan_container {
+    max-width: 900px;
+    @include position_center;
+    display: flex;
+    justify-content: center;
+    .plan_items {
+      margin-top: 106px;
+      width: 220px;
+      height: 474px;
+      margin-right: 7px;
+      border: solid 0.5px $main_color;
+      @include f_column;
+      .plan_tltle {
+        width: 100%;
+        height: 60px;
+        background-color: $main-color;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        p
+        {
+          color: #ffffff;
+        }
+      }
+      .plan_content {
+        color: $main-color;
+        @include font_h(2.7rem,1.6rem);
+        @include position_center;
+        @include  f_column;
+        .plan_price {
+          margin-top: 30px;
+          font-size: 2.5rem;
+        }
+        .plan_price_supplement {
+          font-weight: normal;
+          margin-top: 14px;
+        }
+        .curriculum {
+          margin-top: 48px;
+          margin-bottom: 23px;
+          font-weight: normal;
+        }
+        .support {
+          font-weight: normal;
+        }
+        .plan_text {
+          &::before {
+            content: "\f00c";
+            height: 6px;
+            width: 10px;
+            top: 10%;
+            padding-right: 11px;
+            transform: rotate(135deg);
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+          }
+        }
+        .plan_meeting {
+          font-weight: normal;
+          margin-top: 23px;
+        }
+        .plan_test {
+          @include font_h(2.7rem,1.6rem);
+          margin-top: 21px;
+          font-weight: normal;
+        }
+        .consultation {
+          @extend .curriculum;
+        }
+      }
+    }
+    .plan_items_recommendation {
+      margin-top: 70px;
+      width: 220px;
+      height: 510px;
+      border: solid 0.5px $main_color;
+      margin-right: 7px;
+      align-items: center;
+      text-align: center;
+      @include f_column;
+      .plan_tltle_recommendation {
+        width: 220px;
+        height: 96px;
+        background-color: $main_color_2;
+        color: #ffffff;
+        p {
+          padding-top: 19px;
+        }
+      }
+      .plan_content_recommendation {
+        color: $main-color;
+        @include position_center;
+        @include  f_column;
+        .plan_price {
+          margin-top: 30px;
+          font-size: 2.5rem;
+          color: $main_color_2;
+        }
+        .plan_price_supplement {
+          font-weight: normal;
+          margin-top: 14px;
+        }
+        .curriculum {
+          margin-top: 48px;
+          margin-bottom: 23px;
+          font-weight: normal;
+        }
+        .support {
+          font-weight: normal;
+        }
+        .plan_text {
+          &::before {
+            content: "\f00c";
+            height: 6px;
+            width: 10px;
+            top: 10%;
+            padding-right: 11px;
+            transform: rotate(135deg);
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+          }
+        }
+        .plan_meeting {
+          font-weight: normal;
+          margin-top: 23px;
+        }
+        .plan_test {
+          @include font_h(2.7rem,1.6rem);
+          margin-top: 21px;
+          font-weight: normal;
+        }
+        .plan_interview {
+          font-weight: normal;
+          margin-top: 19px;
+        }
+      }
+    }
+  }
+}
+@include media(900px) {
+  html {
+    font-size: 55%;
+    body {
+      .fv {
+        margin-top: 60px;
+      }
+      .breadcrumb {
+        padding: 0 20px;
+      }
+      .price {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .plan {
+        .plan_container {
+          justify-content: left;
+          padding: 0 30px;
+          .plan_items {
+            min-width: 220px;
+            .plan_tltle {
+              min-width: 100%;
+              min-height: 60px;
+            }
+          }
+          .plan_items_recommendation {
+            min-width: 220px;
+            min-height: 510px;
+            .plan_tltle_recommendation {
+              min-width: 220px;
+              min-height: 96px;
+            }
+            .plan_content_recommendation {
+              .plan_text {
+                &::before {
+                  content: "\f00c";
+                  min-height: 6px;
+                  min-width: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media(768px) {
+  html {
+    font-size: 50%;
+    body {
+      .fv {
+        height: 190px;
+      }
+      .price {
+        .price_container {
+          @include f_column;
+          .price_items {
+            width: 250px;
+            height: 80px;
+          }
+          .price_plus {
+            width: 26px;
+            height: 2px;
+            margin: 35px 0;
+          }
+          &::after {
+            width: 26px;
+            height: 2px;
+          }
+        }
+      }
+      .plan {
+        .plan_container {
+          justify-content: left;
+          padding: 0 30px;
+          .plan_items {
+            min-width: 190px;
+            .plan_tltle {
+              min-width: 100%;
+              min-height: 60px;
+            }
+          }
+          .plan_items_recommendation {
+            min-width: 190px;
+            min-height: 510px;
+            .plan_tltle_recommendation {
+              min-width: 190px;
+              min-height: 90px;
+              width: auto;
+              height: auto;
+            }
+            .plan_content_recommendation {
+              .plan_text {
+                &::before {
+                  content: "\f00c";
+                  min-height: 6px;
+                  min-width: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media(390px) {
+  html {
+    font-size: 40%;
+    body {
+      .fv {
+        height: 150px;
+      }
+      .price {
+        .price_container {
+          @include f_column;
+          .price_items {
+            width: 200px;
+            height: 75px;
+          }
+          .price_plus {
+            width: 26px;
+            height: 2px;
+            margin: 35px 0;
+          }
+          &::after {
+            width: 26px;
+            height: 2px;
+          }
+        }
+      }
+      .plan {
+        .plan_container {
+          justify-content: left;
+          padding: 0 30px;
+          .plan_items {
+            min-width: 160px;
+            .plan_tltle {
+              min-width: 100%;
+              min-height: 60px;
+            }
+          }
+          .plan_items_recommendation {
+            min-width: 160px;
+            min-height: 510px;
+            .plan_tltle_recommendation {
+              min-width: 160px;
+              min-height: 80px;
+              width: auto;
+              height: auto;
+            }
+            .plan_content_recommendation {
+              .plan_text {
+                &::before {
+                  content: "\f00c";
+                  min-height: 6px;
+                  min-width: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

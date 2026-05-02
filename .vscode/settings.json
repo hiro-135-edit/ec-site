@@ -1,0 +1,6 @@
+{
+  "dartsass.outputFormat": "cssonly",
+  "dartsass.targetDirectory": "css",
+  "dartsass.sassBinPath": "/Users/hiro/Desktop/webapp/web制作/上級編/node_modules/sass/sass.js",
+  "dartsass.disableCompileOnSave": false
+}

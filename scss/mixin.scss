@@ -1,0 +1,58 @@
+$main_color: #1B224C;
+$main_color_2: #F5A623;
+@mixin header_btn($color) {
+  color: #FFFFFF;
+  background-color: $color;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: 5px;
+}
+@mixin font_h($font_b,$font_s){
+  line-height: ($font_b / $font_s);
+  font-size: $font_s;
+}
+@mixin font_s($font_s) {
+  font-size: $font_s;
+}
+@mixin btn($u_d,$l_r,$b_color,$color,$b_r) {
+  padding: $u_d $l_r;
+  background-color: $b_color;
+  color: $color;
+  border-radius: $b_r;
+}
+@mixin section_size($m_width,$height) {
+  max-width: $m_width;
+  height: $height;
+  margin: 0 auto;
+  text-align: center;
+}
+@mixin section_title($u_d,$l_r,$color) {
+  font-size: 3.6rem;
+  padding: $u_d $l_r;
+  color: $color;
+  text-align: center;
+  margin: 0 auto;
+}
+@mixin position_center {
+  margin: 0 auto;
+  text-align: center;
+}
+@mixin f_column {
+  display: flex;
+  flex-flow: column;
+}
+@mixin back_image {
+  background-size: cover;
+  background-position: center;
+}
+@mixin section_title2 {
+  font-size: 3.2rem;
+  margin: 0 auto;
+  text-align: center;
+  color: $main_color;
+}
+@mixin media($break_point) {
+  @media screen and (max-width: $break_point) {
+    @content;
+  }
+}

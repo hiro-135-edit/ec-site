@@ -1,0 +1,261 @@
+@forward "reset";
+@use "mixin" as *;
+footer {
+  .footer_wrapper {
+    @include position_center;
+    .contact {
+      height: 254px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-image: url("../image/cta@2x.png");
+      @include position_center;
+      align-items: center;
+      @include f_column;
+      .sub_section_title {
+        padding-top: 70px;
+        padding-bottom: 16px;
+        color: #FFFFFF;
+        font-size: 3.2rem;
+      }
+      .document_btn {
+        @include btn(17px,108px,$main_color_2,#FFFFFF,25px);
+      }
+      .contact_btn {
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-top: 22px;
+        text-decoration: underline;
+      }
+    }
+    .phone_contact {
+      height: 80px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      .call_to_action {
+        color: $main-color;
+      }
+      .phone_number {
+        font-size: 3.6rem;
+        color: $main-color;
+        margin: 0 20px;
+      }
+      .business_items {
+        font-weight: 400;
+        width: 240px;
+        display: flex;
+        justify-content: start;
+      }
+    }
+    .footer_bottom {
+      background-color: $main-color;
+      height: 230px;
+      .footer_inner {
+        height: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .footer_nav {
+          display: flex;
+          margin-top: 45.5px;
+          .footer_list {
+            height: 23px;
+            border-right: solid 1px #FFFFFF;
+            list-style: none;
+            padding: 0 21.5px;
+            .footer_nav_items {
+              display: block;
+              padding-top: 3.5px;
+              color: #FFFFFF;
+            }
+          }
+          :last-child {
+            border: none;
+          }
+        }
+        .footer_items_container {
+          .footer_logo {
+            display: inline-block;
+            margin-top: 35px;
+            background-color: #FFFFFF;
+            color: #FFFFFF;
+            padding: 14px 19px;
+            margin-bottom: 27px;
+            width: auto;
+            img {
+              display: block;
+              width: 159px;
+              height: 31px;
+            }
+          }
+          .footer_items {
+            text-align: right;
+            margin-right: 0;
+            .footer_phone {
+              text-align: right;
+              display: flex;
+              justify-content: end;
+              .footer_phone_img {
+                display: block;
+                width: 10px;
+                height: 14.7px;
+              }
+              .phone_number {
+                color: #FFFFFF;
+                font-size: 1.6rem;
+                margin-bottom: 13px;
+                margin-left: 7px;
+              }
+            }
+            .footer_time {
+              font-weight: 400;
+              font-size: 1.2rem;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+    .footer_copy {
+      height: 36px;
+      .footer_copy_wrapper {
+        max-width: 900px;
+        height: 100%;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        justify-content: end;
+        .copy_text {
+          display: inline;
+          background-color: #FFFFFF;
+          font-size: 1.2rem;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+@include media(900px) {
+  footer {
+    .footer_wrapper {
+      .contact {
+        .sub_section_title {
+          font-size: 3rem;
+        }
+      }
+      .phone_contact {
+        .call_to_action {
+          width: 220px;
+          display: flex;
+          justify-content: end;
+        }
+        .phone_number {
+          font-size: 3rem;
+        }
+        .business_items {
+          width: 220px;
+          display: flex;
+          justify-content: start;
+        }
+      }
+      .footer_bottom {
+        .footer_inner {
+          width: 90%;
+          .footer_items_container {
+            .footer_logo {
+              padding: 12px 16px;
+            }
+          }
+        }
+      }
+      .footer_copy {
+        .footer_copy_wrapper {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+@include media(768px) {
+  footer {
+    .footer_wrapper {
+      .contact {
+        .sub_section_title {
+          font-size: 3rem;
+          padding-bottom: 30px;
+        }
+        .document_btn {
+          padding-right: 40%;
+          padding-left: 40%;
+          font-size: 2rem;
+        }
+      }
+      .phone_contact {
+        height: 140px;
+        @include f_column;
+        .call_to_action {
+          width: auto;
+          font-size: 1.8rem;
+          display: flex;
+          justify-content: center;
+        }
+        .phone_number {
+          padding: 20px 0;
+        }
+        .business_items {
+          font-size: 1.8rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .footer_bottom {
+        .footer_inner {
+          .footer_nav {
+            margin-top: 20px;
+            @include f_column;
+            .footer_list {
+              border-right: none;
+              border-bottom: solid 1px #FFFFFF;
+              padding: 20px 0;
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+          .footer_items_container {
+            .footer_logo {
+              padding: 8px 10px;
+              img {
+                width: 135px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media(390px) {
+  footer {
+    .footer_wrapper {
+      .footer_bottom {
+        .footer_inner {
+          .footer_items_container {
+            .footer_logo {
+              img {
+                width: 120px;
+                height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
