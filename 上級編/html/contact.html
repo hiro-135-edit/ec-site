@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/contact.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="../js/script.js"></script>
+  <title>ポートフォリオ</title>
+</head>
+<body>
+  <header>
+    <nav class="header_wrapper">
+      <a href="../html/index.html" class="header_logo">
+        <img src="../image/logo (2)@2x.png" alt="#">
+      </a>
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <a href="../html/index.html" class="navbar-link">ホーム</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../html/news.html" class="navbar-link">お知らせ</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../html/blog.html" class="navbar-link">ブログ</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../html/price.html" class="navbar-link">コース・料金</a>
+        </li>
+        <li class="navbar-btn"><a href="../html/contact.html" class="hamburger_btn">資料請求</a></li><!-- /.navbar-item -->
+        <li class="navbar-btn"><a href="../html/contact.html" class="hamburger_btn_2">お問い合わせ</a></li><!-- /.navbar-item -->
+      </ul>
+      <div class="business_items">
+        <time class="business_time">平日08:00〜20:00</time><!-- /.business_time -->
+        <div class="phone">
+          <div class="phone_img">
+            <img src="../image/パス 29@2x.png" alt="#">
+          </div><!-- /.phone_img -->
+          <a href="tel" class="phone_number">0123-456-7890</a><!-- /.phone_number -->
+        </div><!-- /.phone -->
+      </div><!-- /.business_items -->
+      <a href="../html/contact.html" class="document_btn">資料請求</a><!-- /.document_btn -->
+      <a href="../html/contact.html" class="contact_btn">お問い合わせ</a><!-- /.contacrt_btn -->
+      <div class="hamburger">
+        <span class="hamburger_items"></span><!-- /.hamburger_items -->
+        <span class="hamburger_items"></span><!-- /.hamburger_items -->
+        <span class="hamburger_items"></span><!-- /.hamburger_items -->
+      </div><!-- /.hamburger -->
+    </nav>
+  </header>
+  <section class="fv">
+    <h1 class="section_title">お問い合わせ・資料請求</h1><!-- /.section_title -->
+  </section><!-- /.fv -->
+  <div class="breadcrumb">
+    <div class="breadcrumb_wrapper">
+      <a href="../html/index.html" class="breadcrumb_link">ホーム</a><!-- /.breadcrumb_list -->
+      <span class="breadcrumb_span">&gt;</span><!-- /.breadcrumb_span -->
+      <p class="breadcrumb_items">お問い合わせ</p><!-- /.breadcrumb_items -->
+    </div><!-- /.breadcrumb_wrapper -->
+  </div><!-- /.breadcrumb -->
+  <section class="contact">
+    <div class="contact_wrapper">
+      <div class="contact_text">弊社に興味を持って頂きありがとうございます。商談やサービスのご利用、資料請求について下記のフォームよりお問い合わせください。</div><!-- /.contact_text -->
+      <form class="contact_form" method="post" action="#">
+        <label for="company" class="input_label">会社名</label>
+        <input type="text" class="input_text" name="company" placeholder="Engress" required>
+        <label for="name" class="input_label">氏名</label>
+        <input type="text" class="input_text" name="name" placeholder="田中   太郎" required>
+        <label for="phone" class="input_label">メールアドレス</label>
+        <input type="email" class="input_text" name="phone" placeholder="example@example.com" required>
+        <label for="phone" class="input_label">電話番号</label>
+        <input type="text" class="input_text" name="phone" placeholder="01-2345-6789" required>
+        <label class="contact_label">お問い合わせの種類を選択してください（<span>資料請求の方は資料請求を選択ください</span>）</label>
+        <div class="contact_list">
+          <input type="radio" class="contact_radio" name="contact" value="商談のご相談" >
+          <label for="business_consultation" class="contact_text">商談のご相談</label>
+        </div><!-- /.contact_list -->
+        <div class="contact_list">
+          <input type="radio" class="contact_radio" name="contact" value="サービスに関するお問い合わせ" >
+          <label for="inquiries_about_services" class="contact_text">サービスに関するお問い合わせ</label>
+        </div><!-- /.contact_list -->
+        <div class="contact_list">
+          <input type="radio" class="contact_radio" name="contact" value="資料請求" >
+          <label for="inquiries_about_services" class="contact_text">資料請求</label>
+        </div><!-- /.contact_list -->
+        <div class="contact_list">
+          <input type="radio" class="contact_radio" name="contact" value="その他" >
+          <label for="other" class="contact_text">その他</label>
+        </div><!-- /.contact_list -->
+        <label for="message" class="contact_label">お問い合わせ内容</label>
+        <textarea name="message" class="input_message"  placeholder="入力して下さい" required></textarea>
+        <p class="privacy_text"><a href="#" class="privacy_span">プライバシーポリシー</a>に同意の上、送信ください。</p><!-- /.privacy_text -->
+        <div class="privacy_check">
+          <div class="privacy_check_box">
+            <input type="checkbox" class="input_check" name="privacy" value="プライバシーポリシーに同意する">
+          </div><!-- / -->
+          <label for="privacy" class="privacy_consent_text">プライバシーポリシーに同意する</label>
+        </div><!-- /.privacy_check -->
+        <button type="submit" class="contact_button">送信する</button>
+      </form>
+    </div><!-- /.contact_wrapper -->
+  </section><!-- /.contact_text -->
+  <footer class="footer">
+    <div class="footer_wrapper">
+      <div class="footer_bottom">
+        <div class="footer_inner">
+          <nav class="footer_nav">
+            <li class="footer_list"><a class="footer_nav_items" href="#">ホーム</a></li>
+            <li class="footer_list"><a class="footer_nav_items" href="#">お知らせ</a></li>
+            <li class="footer_list"><a class="footer_nav_items" href="#">ブログ</a></li>
+            <li class="footer_list"><a class="footer_nav_items" href="../html/price.html">コース・料金</a></li>
+          </nav><!-- /.footer_nav -->
+          <div class="footer_items_container">
+            <a href="#" class="footer_logo">
+              <img src="../image/logo (2)@2x.png" alt="#">
+            </a><!-- /.footer_logo -->
+            <div class="footer_items">
+              <div class="footer_phone">
+                <div class="footer_phone_img">
+                  <img src="../image/パス 16@2x.png" alt="#">
+                </div><!-- /.phone_img -->
+                <a href="tel" class="phone_number">0123-456-7890</a><!-- /.phone_number -->
+              </div><!-- /.phone -->
+              <time class="footer_time" >平日08:00~20:00</time>
+            </div><!-- /.footer_items -->
+          </div><!-- / -->
+        </div><!-- /.footer_inner -->
+      </div><!-- /.footer_bottom -->
+      <div class="footer_copy">
+        <div class="footer_copy_wrapper">
+          <small class="copy_text">© 2020 Engress.</small><!-- /.copy_text -->
+        </div><!-- /.footer_copy_wrapper -->
+      </div><!-- /.footer_copy -->
+    </div><!-- /.footer_wrapper -->
+  </footer>
+</body>
+</html>
